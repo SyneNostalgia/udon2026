@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udon Thani International Horticultural Expo 2026</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Anuphan', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- NAV BAR -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="font-bold text-green-600 text-lg md:text-xl tracking-wide" data-i18n="nav-logo">
+                UDON 2026
+            </div>
+            <!-- ปุ่มสลับภาษา -->
+            <div class="flex space-x-2 bg-gray-100 p-1 rounded-full border border-gray-200">
+                <button onclick="switchLang('th')" id="btn-th" class="px-3 py-1.5 rounded-full text-sm font-semibold transition-all bg-green-600 text-white shadow-sm">TH</button>
+                <button onclick="switchLang('en')" id="btn-en" class="px-3 py-1.5 rounded-full text-sm font-semibold transition-all text-gray-600 hover:text-green-600">EN</button>
+                <button onclick="switchLang('cn')" id="btn-cn" class="px-3 py-1.5 rounded-full text-sm font-semibold transition-all text-gray-600 hover:text-green-600">CN</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION WITH BACKGROUND IMAGE -->
+    <header class="relative bg-gray-900 py-24 px-4 overflow-hidden min-h-[500px] flex items-center justify-center">
+        <!-- รูปภาพ Background หลัก (hero.jpg) -->
+        <img src="images/hero.jpg" alt="Udon Thani Expo" class="absolute inset-0 w-full h-full object-cover opacity-40">
+        <!-- Overlay สีดำจางๆ ช่วยให้ตัวหนังสืออ่านง่ายขึ้น (Good UX) -->
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+        
+        <div class="relative max-w-4xl mx-auto text-center space-y-6 z-10">
+            <span class="inline-block bg-green-500/20 text-green-300 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider border border-green-500/30" data-i18n="hero-tag">
+                International Horticultural Expo
+            </span>
+            <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight drop-shadow-md" data-i18n="hero-title">
+                โครงการมหกรรมพืชสวนโลก อุดรธานี 2569
+            </h1>
+            <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto drop-shadow" data-i18n="hero-subtitle">
+                วิสัยทัศน์แห่งความยั่งยืนและการเชื่อมโยงธรรมชาติสู่ใจกลางเมืองอุดรธานี
+            </p>
+            
+            <!-- ข้อมูลสำคัญ (วันที่ และ สถานที่) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto mt-10">
+                <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20 flex flex-col items-center text-white">
+                    <span class="text-2xl mb-1">📅</span>
+                    <h3 class="font-semibold text-green-300 text-xs uppercase tracking-wider mb-1" data-i18n="info-date-label">วันที่จัดงาน</h3>
+                    <p class="font-medium text-sm md:text-base" data-i18n="info-date-value">1 พฤศจิกายน 2569 – 14 มีนาคม 2570</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20 flex flex-col items-center text-white">
+                    <span class="text-2xl mb-1">📍</span>
+                    <h3 class="font-semibold text-green-300 text-xs uppercase tracking-wider mb-1" data-i18n="info-loc-label">สถานที่จัดงาน</h3>
+                    <p class="font-medium text-xs md:text-sm text-center" data-i18n="info-loc-value">พื้นที่ชุ่มน้ำหนองแด ตำบลกุดสระ อำเภอเมือง จังหวัดอุดรธานี</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT SECTION (การ์ดไฮไลท์พร้อมรูปภาพ) -->
+    <main class="max-w-6xl mx-auto px-4 py-16 space-y-16">
+        <section class="text-center space-y-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900" data-i18n="section-title">ไฮไลท์ภายในงาน</h2>
+            <p class="text-gray-500 max-w-xl mx-auto" data-i18n="section-subtitle">สัมผัสประสบการณ์ความอัศจรรย์ของพรรณไม้และเทคโนโลยีการเกษตรระดับโลก</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col">
+                    <div class="h-48 overflow-hidden bg-gray-200">
+                        <img src="images/rare-plants.jpg" alt="Rare Flora" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6 text-left flex-1">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800" data-i18n="card1-title">โซนพรรณไม้หายาก</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="card1-desc">รวบรวมพืชพรรณจากทั่วทุกมุมโลกมาจัดแสดงในเรือนกระจกควบคุมอุณหภูมิอัจฉริยะ</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col">
+                    <div class="h-48 overflow-hidden bg-gray-200">
+                        <img src="images/nongdae.jpg" alt="Nong Dae Innovation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6 text-left flex-1">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800" data-i18n="card2-title">นวัตกรรมหนองแด</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="card2-desc">การพลิกฟื้นพื้นที่ชุ่มน้ำสู่ต้นแบบการบริหารจัดการน้ำและการเกษตรที่ยั่งยืน</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col">
+                    <div class="h-48 overflow-hidden bg-gray-200">
+                        <img src="images/culture.jpg" alt="Culture" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6 text-left flex-1">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800" data-i18n="card3-title">วัฒนธรรมและวิถีชุมชน</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="card3-desc">การแสดงศิลปวัฒนธรรมพื้นบ้านอีสาน ผสานเข้ากับนวัตกรรมระดับนานาชาติอย่างลงตัว</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-gray-100 py-8 text-center text-sm text-gray-500">
+        <p data-i18n="footer-text">© 2026 มหกรรมพืชสวนโลก อุดรธานี 2569. สงวนลิขสิทธิ์ทั้งหมด.</p>
+    </footer>
+
+    <!-- JAVASCRIPT FOR MULTI-LANGUAGE SWITCHING -->
+    <script>
+        const translations = {
+            th: {
+                "nav-logo": "พืชสวนโลก อุดร 2569",
+                "hero-tag": "มหกรรมพืชสวนโลกครั้งยิ่งใหญ่",
+                "hero-title": "โครงการมหกรรมพืชสวนโลก อุดรธานี 2569",
+                "hero-subtitle": "วิสัยทัศน์แห่งความยั่งยืนและการเชื่อมโยงธรรมชาติสู่ใจกลางเมืองอุดรธานี",
+                "info-date-label": "วันที่จัดงาน",
+                "info-date-value": "1 พฤศจิกายน 2569 – 14 มีนาคม 2570",
+                "info-loc-label": "สถานที่จัดงาน",
+                "info-loc-value": "พื้นที่ชุ่มน้ำหนองแด ตำบลกุดสระ อำเภอเมือง จังหวัดอุดรธานี",
+                "section-title": "ไฮไลท์ภายในงาน",
+                "section-subtitle": "สัมผัสประสบการณ์ความอัศจรรย์ของพรรณไม้และเทคโนโลยีการเกษตรระดับโลก",
+                "card1-title": "โซนพรรณไม้หายาก",
+                "card1-desc": "รวบรวมพืชพรรณจากทั่วทุกมุมโลกมาจัดแสดงในเรือนกระจกควบคุมอุณหภูมิอัจฉริยะ",
+                "card2-title": "นวัตกรรมหนองแด",
+                "card2-desc": "การพลิกฟื้นพื้นที่ชุ่มน้ำสู่ต้นแบบการบริหารจัดการน้ำและการเกษตรที่ยั่งยืน",
+                "card3-title": "วัฒนธรรมและวิถีชุมชน",
+                "card3-desc": "การแสดงศิลปวัฒนธรรมพื้นบ้านอีสาน ผสานเข้ากับนวัตกรรมระดับนานาชาติอย่างลงตัว",
+                "footer-text": "© 2026 มหกรรมพืชสวนโลก อุดรธานี 2569. สงวนลิขสิทธิ์ทั้งหมด."
+            },
+            en: {
+                "nav-logo": "UDON EXPO 2026",
+                "hero-tag": "International Horticultural Expo",
+                "hero-title": "Udon Thani International Horticultural Expo 2026",
+                "hero-subtitle": "A vision of sustainability, connecting nature and humanity in the heart of Udon Thani.",
+                "info-date-label": "Event Date",
+                "info-date-value": "November 1, 2026 – March 14, 2027",
+                "info-loc-label": "Location",
+                "info-loc-value": "Nong Dae Wetland, Kut Sa Subdistrict, Mueang District, Udon Thani Province",
+                "section-title": "Event Highlights",
+                "section-subtitle": "Experience the wonders of global flora and cutting-edge agricultural technology.",
+                "card1-title": "Rare Flora Zone",
+                "card1-desc": "A spectacular collection of unique plants from around the globe in a smart greenhouse.",
+                "card2-title": "Nong Dae Innovation",
+                "card2-desc": "Transforming wetlands into a global model for sustainable water and agritech management.",
+                "card3-title": "Cultural & Local Wisdom",
+                "card3-desc": "Discover the vibrant Isan heritage blended beautifully with international innovations.",
+                "footer-text": "© 2026 Udon Thani Horticultural Expo. All rights reserved."
+            },
+            cn: {
+                "nav-logo": "乌隆府世园会 2026",
+                "hero-tag": "国际园艺博览会",
+                "hero-title": "2026年乌隆他尼国际园艺博览会",
+                "hero-subtitle": "可持续发展的愿景，将自然与人类连接在乌隆他尼的心脏地带。",
+                "info-date-label": "举办日期",
+                "info-date-value": "2026年11月1日 – 2027年3月14日",
+                "info-loc-label": "举办地点",
+                "info-loc-value": "乌隆他尼府治县古沙区廊大湿地",
+                "section-title": "展会亮点",
+                "section-subtitle": "体验全球植物奇观与前沿农业科技的魅力。",
+                "card1-title": "珍稀植物区",
+                "card1-desc": "在智能温室中展示来自全球各地的珍稀植物景观。",
+                "card2-title": "廊大创新展示",
+                "card2-desc": "将湿地打造成为可持续水资源管理与农业科技的全球典范。",
+                "card3-title": "文化与本土智慧",
+                "card3-desc": "探索璀璨的泰东北依善文化与国际创新理念的完美融合。",
+                "footer-text": "© 2026 乌隆他尼国际园艺博览会. 版权所有."
+            }
+        };
+
+        function switchLang(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(elem => {
+                const key = elem.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    elem.textContent = translations[lang][key];
+                }
+            });
+
+            document.documentElement.lang = lang;
+
+            const buttons = ['th', 'en', 'cn'];
+            buttons.forEach(b => {
+                const btn = document.getElementById(`btn-${b}`);
+                if (b === lang) {
+                    btn.className = "px-3 py-1.5 rounded-full text-sm font-semibold transition-all bg-green-600 text-white shadow-sm";
+                } else {
+                    btn.className = "px-3 py-1.5 rounded-full text-sm font-semibold transition-all text-gray-600 hover:text-green-600";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
